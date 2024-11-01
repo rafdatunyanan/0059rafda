@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UMKM Pekalongan - Pusat Batik & Kuliner</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                        url('/api/placeholder/1200/600');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem;
+            background: rgba(255,255,255,0.95);
+            z-index: 1000;
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .product-card {
+            border: 1px solid #eee;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 1rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: #e63946;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background 0.3s;
+        }
+
+        .cta-button:hover {
+            background: #dc2f3d;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-content">
+            <h2>UMKM Pekalongan</h2>
+            <div class="nav-links">
+                <a href="#beranda">Beranda</a>
+                <a href="#produk">Produk</a>
+                <a href="#tentang">Tentang</a>
+                <a href="contact.html">Kontak</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero" id="beranda">
+        <div>
+            <h1 data-aos="fade-up">Selamat Datang di UMKM Pekalongan</h1>
+            <p data-aos="fade-up" data-aos-delay="200">Pusat Batik & Kuliner Khas Pekalongan</p>
+            <a href="#produk" class="cta-button" data-aos="fade-up" data-aos-delay="400">Jelajahi Produk</a>
+        </div>
+    </div>
+
+    <section class="section" id="produk">
+        <h2 data-aos="fade-up">Produk Unggulan Kami</h2>
+        <div class="products">
+            <div class="product-card" data-aos="fade-up">
+                <img src="gallery/batik.jpg" alt="Batik Pekalongan" class="product-image" style="height: 300px;">
+                <div class="product-info">
+                    <h3>Batik Pekalongan</h3>
+                    <p>Batik tulis berkualitas tinggi dengan motif khas Pekalongan</p>
+                    <a href="https://rumahbatikbedjo.com/2023/06/18/kemeja-batik-tulis-pekalongan-memikat-dengan-kualitas-dan-keunikan-motifnya/" class="cta-button">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-aos-delay="200">
+                <img src="gallery/megono.jpg" alt="Megono" class="product-image" style="height: 300px;">
+                <div class="product-info">
+                    <h3>Nasi Megono</h3>
+                    <p>Kuliner khas Pekalongan dengan cita rasa autentik</p>
+                    <a href="https://wartakota.tribunnews.com/2017/10/16/sejarah-panjang-nasi-megono-pekalongan?page=all" class="cta-button">Lihat Detail</a>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up" data-aos-delay="400">
+                <img src="gallery/tas kanvas.jpg" alt="Kerajinan" class="product-image" style="height: 300px;">
+                <div class="product-info">
+                    <h3>Kerajinan Tangan</h3>
+                    <p>Selain Batik, Kerajinan Tas Kanvas Pekalongan Tak Kalah Indah</p>
+                    <a href="https://pekalongankota.go.id/berita/selain-batik-kerajinan-tas-kanvas-pekalongan-tak-kalah-indah.html" class="cta-button">Lihat Detail</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="tentang" style="background: #f8f9fa;">
+        <div data-aos="fade-up">
+            <h2>Tentang Kami</h2>
+            <p style="margin-top: 1rem; line-height: 1.6;">
+                UMKM Pekalongan adalah wadah bagi para pelaku usaha mikro, kecil, dan menengah di Kota Pekalongan. 
+                Kami berkomitmen untuk melestarikan dan mengembangkan produk-produk lokal berkualitas, 
+                mulai dari batik yang sudah mendunia hingga kuliner khas yang menggugah selera.
+            </p>
+        </div>
+    </section>
+
+    <section class="section" id="kontak">
+        <div data-aos="fade-up">
+            <h2>Hubungi Kami</h2>
+            <p style="margin-top: 1rem;">
+                Alamat: Jl.raya surabayan No. 127, Pekalongan<br>
+                Email: rohanitunyanan499@gmail.com<br>
+                Telepon: (0813) 62175921
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 UMKM Pekalongan. Hak Cipta Dilindungi.</p>
+    </footer>
+
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+    </script>
+</body>
+</html>
